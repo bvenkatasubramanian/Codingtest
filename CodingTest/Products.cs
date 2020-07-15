@@ -52,7 +52,7 @@ namespace CodingTest
 
                 if (quantsnumerator >= 1)
                 {
-                    return ((quantsdenominator * 20));
+                    return ((quantsnumerator * 20));
                 }
             }
 
@@ -69,7 +69,7 @@ namespace CodingTest
 
                 if (quantsnumerator >= 1)
                 {
-                    return ((quantsdenominator * 15));
+                    return ((quantsnumerator * 15));
                 }
             }
 

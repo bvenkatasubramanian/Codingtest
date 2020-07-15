@@ -45,28 +45,33 @@ namespace CodingTest
 
                 var specialofferC = false;
                 var specialofferD = false;
+                var counter = 0;
 
                 foreach(var ij in orders)
                 {
                     if(ij.Unit=="C" && ij.Quantity == 1)
                     {
                         specialofferC = true;
-                       
+                        
                     }
                     if(ij.Unit =="D" && ij.Quantity == 1)
                     {
                         specialofferD = true;
                     }
+                    counter++;
                 }
+                
 
                 double total = 0;
                 
                 foreach (var im in orders)
                 {
-                    if(specialofferC && specialofferD && (im.Unit=="C" || im.Unit =="D"))
-                    {
-                        total -= 2.5;
-                    }
+                    //if(specialofferC && specialofferD && (im.Unit=="C" || im.Unit =="D"))
+                    //{
+                    //    total -= 2.5;
+                    //}
+
+                    
 
                     total += prods.getPrice(im.Unit.ToString(), Convert.ToInt32(im.Quantity));
                 }
