@@ -1,0 +1,11 @@
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\bin\Debug\netcoreapp2.0\CodingTest.deps.json
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\bin\Debug\netcoreapp2.0\CodingTest.runtimeconfig.json
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\bin\Debug\netcoreapp2.0\CodingTest.runtimeconfig.dev.json
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\bin\Debug\netcoreapp2.0\CodingTest.dll
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\bin\Debug\netcoreapp2.0\CodingTest.pdb
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\obj\Debug\netcoreapp2.0\CodingTest.csprojResolveAssemblyReference.cache
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\obj\Debug\netcoreapp2.0\CodingTest.csproj.CoreCompileInputs.cache
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\obj\Debug\netcoreapp2.0\CodingTest.AssemblyInfoInputs.cache
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\obj\Debug\netcoreapp2.0\CodingTest.AssemblyInfo.cs
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\obj\Debug\netcoreapp2.0\CodingTest.dll
+c:\users\bvenkat\source\repos\CodingTest\CodingTest\obj\Debug\netcoreapp2.0\CodingTest.pdb
