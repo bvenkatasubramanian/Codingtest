@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace CodingTest
 {
@@ -43,36 +44,76 @@ namespace CodingTest
                     Console.WriteLine("Please enter an integer value");
                 }
 
+                List<Order> details = new List<Order>();
+
+                var detailsA = (from c in orders
+                              where c.Unit == "A"
+                              select c.Quantity).Sum();
+
+                details.Add(new Order() { Unit = "A", Quantity = detailsA });
+
+                var detailsB = (from c in orders
+                                where c.Unit == "B"
+                                select c.Quantity).Sum();
+                details.Add(new Order() { Unit = "B", Quantity = detailsB });
+
+                var detailsC = (from c in orders
+                                where c.Unit == "C"
+                                select c.Quantity).Sum();
+
+                details.Add(new Order() { Unit = "C", Quantity = detailsC });
+
+                var detailsD = (from c in orders
+                                where c.Unit == "D"
+                                select c.Quantity).Sum();
+
+                details.Add(new Order() {  Unit="D", Quantity= detailsD});
+
+
                 var specialofferC = false;
                 var specialofferD = false;
+                var cunit = false;
+                var dunit = false;
                 var counter = 0;
-
-                foreach(var ij in orders)
+                var cquants = 0;
+                var dquants = 0;
+                double total = 0;
+                
+                foreach (var ij in details)
                 {
-                    if(ij.Unit=="C" && ij.Quantity == 1)
+                    if(ij.Unit=="C" && ij.Quantity > 0)
                     {
                         specialofferC = true;
-                        
+                        cquants = ij.Quantity;
                     }
-                    if(ij.Unit =="D" && ij.Quantity == 1)
+
+                    if(ij.Unit =="D" && ij.Quantity > 0)
                     {
                         specialofferD = true;
+                        dquants = ij.Quantity;
                     }
+
+                    if(specialofferC && specialofferD)
+                    {
+                        details[2].Quantity = cquants - 1;
+                        details[3].Quantity = dquants - 1;
+                        total +=30;
+                        
+                    }
+
                     counter++;
                 }
                 
 
-                double total = 0;
                 
-                foreach (var im in orders)
+                
+                foreach (var im in details)
                 {
                     //if(specialofferC && specialofferD && (im.Unit=="C" || im.Unit =="D"))
                     //{
                     //    total -= 2.5;
                     //}
-
                     
-
                     total += prods.getPrice(im.Unit.ToString(), Convert.ToInt32(im.Quantity));
                 }
                
