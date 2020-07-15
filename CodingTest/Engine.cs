@@ -63,7 +63,11 @@ namespace CodingTest
                 
                 foreach (var im in orders)
                 {
-                    
+                    if(specialofferC && specialofferD && (im.Unit=="C" || im.Unit =="D"))
+                    {
+                        total -= 2.5;
+                    }
+
                     total += prods.getPrice(im.Unit.ToString(), Convert.ToInt32(im.Quantity));
                 }
                
