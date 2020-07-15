@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CodingTest
 {
@@ -6,8 +7,22 @@ namespace CodingTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
+
+            Engine engine = new Engine();
+            var list = engine.AddProducts();
+            
+
+            Console.WriteLine("List SKUID and Price");
+
+            foreach(var i in list)
+            {
+                Console.WriteLine(i.Unit.ToString() + " - " + i.Price.ToString() + "Promo: Buy"+ i.promounit);
+            }
+
+            engine.OrderProducts();
+            
         }
+
+       
     }
 }
